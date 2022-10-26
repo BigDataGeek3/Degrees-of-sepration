@@ -1,6 +1,6 @@
 # Degrees-of-sepration
 This project demonstrates the six degrees of separation concept by finding connections between actors through the movies that they have worked in together.
-Using a small practice dataset containing 1000 movies with 4 actors from each we can find a link between two people
+Using a small practice dataset containing 1000 movies with 4 actors from each we can find a link between two people.
 Inputs required:
 
 sPath - filepath to the location of the excel file 6DS data.xlsx
