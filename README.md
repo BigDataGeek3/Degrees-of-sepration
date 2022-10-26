@@ -7,7 +7,7 @@ sPath - filepath to the location of the excel file 6DS data.xlsx
 
 Person1 - One actor from that database
 
-Person2 - Another actor from that database
+Person2 - Another actor from the database
 
 Output:
 A table showing in sequence Person1 acted in Movie A with person B who acted in Movie B.....etc with Person2
