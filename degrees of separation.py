@@ -11,7 +11,7 @@ import pandas as pd
 
 
 # filepath to the location of the input data file
-sPath = r'C:\Users\truly.000\Desktop\data projects\6DS data.xlsx'
+sPath = r'C:\Users\USER\Desktop\6DS data.xlsx'
 # names of Actors you want to find the connection between
 Person1 = "Scarlett Johansson"
 Person2 = "Meryl Streep"
