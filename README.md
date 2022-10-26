@@ -13,4 +13,5 @@ Output:
 A table showing in sequence Person1 acted in Movie A with person B who acted in Movie B.....etc with Person2
 
 Gives error message:
+
 If any one of the names cannot be found in the dataset or it is not possible to find a path within 3 degrees of sepration.
