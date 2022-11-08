@@ -36,7 +36,7 @@ def Phase1 (Data, Name1, Name2):
     df2.loc[:]['Layer'] = 2
     dfTest = df2[df2['Person'] == sDest]
     
-    if dfTest.empty:    #ilayer = 4
+    if dfTest.empty:   #ilayer = 4
     
         df3 = dfdata.loc[dfdata['Person'].isin(df2.Person)]
         df3.loc[:]['Layer'] = 3
@@ -44,7 +44,7 @@ def Phase1 (Data, Name1, Name2):
         df4.loc[:]['Layer'] = 4
         dfTest = df4[df4['Person'] == sDest]
     
-        if dfTest.empty:     #ilayer = 6
+        if dfTest.empty:   #ilayer = 6
     
             df5 = dfdata.loc[dfdata['Person'].isin(df4.Person)]
             df5.loc[:]['Layer'] = 5
@@ -52,7 +52,7 @@ def Phase1 (Data, Name1, Name2):
             df6.loc[:]['Layer'] = 6
             dfTest = df6[df6['Person'] == sDest]
     
-            if dfTest.empty:    #ilayer = 8
+            if dfTest.empty:   #ilayer = 8
                 
                 df7 = dfdata.loc[dfdata['Person'].isin(df6.Person)]
                 df7.loc[:]['Layer'] = 7
@@ -109,7 +109,7 @@ def Phase2(Data, Name1, Name2, finalselection, iLayer):
         dfConnection = dFinal.query('Person == @sConnection and Layer == @iCurrentLayer')
         dFinal.at[dfConnection.index[0],'Path'] = 1
         
-    if iLayer > 6:  #iLayer = 8
+    if iLayer > 6:   #iLayer = 8
     
         sConnection = dFinal.loc[dfConnection.index].Film.values[0]
         iCurrentLayer = iCurrentLayer - 1
