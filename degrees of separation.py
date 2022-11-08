@@ -78,7 +78,7 @@ def Phase2(Data, Name1, Name2, finalselection, iLayer):
     
     dFinal = Data
     sStart = Name1
-    sDest = Name2
+    sDest  = Name2
     iOption = finalselection
     
     #last layer
@@ -90,14 +90,14 @@ def Phase2(Data, Name1, Name2, finalselection, iLayer):
     dfConnection = dFinal.query('Film == @sConnection and Layer == @iCurrentLayer')
     dFinal.at[dfConnection.index[0],'Path'] = 1
     
-    if iLayer > 2:   #iLayer == 4
+    if iLayer > 2:   #iLayer = 4
     
         sConnection = dFinal.loc[dfConnection.index].Person.values[0]
         iCurrentLayer = iCurrentLayer - 1
         dfConnection = dFinal.query('Person == @sConnection and Layer == @iCurrentLayer')
         dFinal.at[dfConnection.index[0],'Path'] = 1
   
-    if iLayer > 4:   #iLayer ==6
+    if iLayer > 4:   #iLayer = 6
         
         sConnection = dFinal.loc[dfConnection.index].Film.values[0]
         iCurrentLayer = iCurrentLayer - 1
@@ -109,7 +109,7 @@ def Phase2(Data, Name1, Name2, finalselection, iLayer):
         dfConnection = dFinal.query('Person == @sConnection and Layer == @iCurrentLayer')
         dFinal.at[dfConnection.index[0],'Path'] = 1
         
-    if iLayer > 6:  #iLayer ==8
+    if iLayer > 6:  #iLayer = 8
     
         sConnection = dFinal.loc[dfConnection.index].Film.values[0]
         iCurrentLayer = iCurrentLayer - 1
@@ -121,7 +121,7 @@ def Phase2(Data, Name1, Name2, finalselection, iLayer):
         dfConnection = dFinal.query('Person == @sConnection and Layer == @iCurrentLayer')
         dFinal.at[dfConnection.index[0],'Path'] = 1
     
-    #layer 1
+    #first layer
     sConnection = dFinal.loc[dfConnection.index].Film.values[0]
     dfConnection = dFinal.query('Film == @sConnection and Person == @sStart')
     dFinal.at[dfConnection.index,'Path'] = 1
