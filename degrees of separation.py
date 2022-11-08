@@ -132,14 +132,14 @@ def Phase2(Data, Name1, Name2, finalselection, iLayer):
 
 
 dfPhase1 = Phase1(dfInput, Person1, Person2)
-dfPhase1[dfPhase1['Person'] == Person2]
+dfPhase1[dfPhase1['Person'] == Person2].reset_index(drop=True)
 
 
 # In[6]:
 
 
-# if output above contains more than one film, you can change iLine to 1,2,3.... 
-# to a max value of number of rows minus one. Default value iLine = 0
+# if output above contains more than one film, you can change iLine to any value from the first column 
+# Default value iLine = 0
 iLine = 0
 dfOutput = Phase2(dfPhase1, Person1, Person2, iLine, dfPhase1.Layer.max() )
 dfOutput[dfOutput['Path'] == 1]
